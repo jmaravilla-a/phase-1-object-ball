@@ -119,4 +119,19 @@ function gameObject(){
 }
 console.log(gameObject());
 
-
+function numPointsScored(playerName){
+    let gameObj = gameObject();
+    for (let item in gameObj){
+        let playerPoints  = gameObj[item].players
+        for(let key in playerPoints ){
+            if(playerName === key ){
+                return key.points;
+            }
+        }
+    }
+    return key.points;
+}
+console.log(numPointsScored('Alan Anderson'))
+// /if(playerName === item.players){
+//     return
+// }
